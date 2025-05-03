@@ -25,6 +25,8 @@ export function Navigation() {
     { name: 'Experience', href: '#experience' },
     { name: 'Skills', href: '#skills' },
     { name: 'Education', href: '#education' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'Blog', href: '#blog' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -62,7 +64,7 @@ export function Navigation() {
           
           <div className="flex items-center space-x-4">
             {/* Theme toggle button */}
-            <button
+            {/* <button
               onClick={toggle}
               className={`p-2 rounded-full ${
                 isDark 
@@ -72,7 +74,7 @@ export function Navigation() {
               aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
             >
               {isDark ? <FaSun className="text-lg" /> : <FaMoon className="text-lg" />}
-            </button>
+            </button> */}
             
             {/* Desktop navigation */}
             <nav className="hidden md:flex space-x-6">
