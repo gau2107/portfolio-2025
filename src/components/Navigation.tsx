@@ -1,10 +1,10 @@
-// Navigation.tsx
 'use client';
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSmoothScroll } from '@/hooks/useSmoothScroll';
 import { FaBars, FaTimes, FaMoon, FaSun } from 'react-icons/fa';
+import { useTheme } from './ThemeProvider';
 
 interface NavItem {
   name: string;
@@ -13,12 +13,14 @@ interface NavItem {
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { isDark, toggle } = useTheme();
   const { scrollToElement } = useSmoothScroll();
+  
+  // Fix: Use isDark directly from the context instead of undefined theme
+  // const isDarkMode = theme === 'dark';
 
   const navItems: NavItem[] = [
-    { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Experience', href: '#experience' },
     { name: 'Skills', href: '#skills' },
@@ -27,16 +29,6 @@ export function Navigation() {
   ];
 
   useEffect(() => {
-    // Check system preference for dark mode
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setIsDarkMode(prefersDark);
-    
-    // Apply dark mode class based on preference
-    if (prefersDark) {
-      document.documentElement.classList.add('dark');
-    }
-
-    // Handle scroll event for header styling
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
     };
@@ -44,11 +36,6 @@ export function Navigation() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-    document.documentElement.classList.toggle('dark');
-  };
 
   const handleNavigationClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -59,7 +46,9 @@ export function Navigation() {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-      scrolled ? 'bg-white dark:bg-gray-900 shadow-md py-3' : 'bg-transparent py-5'
+      scrolled 
+        ? 'bg-white shadow-md py-3 dark:bg-gray-900 dark:text-white' 
+        : 'bg-transparent py-5 dark:text-white'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
@@ -72,16 +61,18 @@ export function Navigation() {
           </a>
           
           <div className="flex items-center space-x-4">
-            {/* Dark mode toggle */}
-            <motion.button
-              onClick={toggleDarkMode}
-              className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+            {/* Theme toggle button */}
+            <button
+              onClick={toggle}
+              className={`p-2 rounded-full ${
+                isDark 
+                  ? 'bg-gray-800 text-yellow-300' 
+                  : 'bg-gray-100 text-gray-700'
+              } transition-colors duration-200`}
+              aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
             >
-              {isDarkMode ? <FaSun /> : <FaMoon />}
-            </motion.button>
+              {isDark ? <FaSun className="text-lg" /> : <FaMoon className="text-lg" />}
+            </button>
             
             {/* Desktop navigation */}
             <nav className="hidden md:flex space-x-6">
