@@ -1,0 +1,58 @@
+{
+  "bio": [
+    "I'm a results-driven Frontend Engineer with 6+ years of experience in developing modern, scalable, and high-performance web applications. My expertise spans TypeScript, React, Next.js, Svelte, and Electron.js, with deep knowledge of functional components, hooks, context API, and state management using Redux, Zustand, and Flux.",
+    "I have a proven track record of delivering impactful solutions across healthcare, e-commerce, diamond, stock management, and edtech sectors. I'm an enthusiastic self-learner passionate about emerging JavaScript technologies and optimizing engineering workflows.",
+    "Based in Gandhinagar, Gujarat, I'm always looking for new challenges and opportunities to grow both professionally and personally."
+  ],
+  "interests": [
+    { "text": "Exploring new places and cultures", "icon": "FaMountain" },
+    { "text": "Staying updated on technology and design trends", "icon": "FaLaptopCode" },
+    { "text": "Reading productivity, tech, and philosophy books", "icon": "FaBookOpen" },
+    { "text": "Meditation and mindfulness practices", "icon": "FaMeditation" },
+    { "text": "Cooking and trying new cuisines", "icon": "FaUtensils" },
+    { "text": "Gardening and maintaining a green lifestyle", "icon": "FaLeaf" },
+    { "text": "Creating side projects and prototypes", "icon": "FaCode" }
+  ],
+  "languages": [
+    { "name": "JavaScript", "level": "Advanced", "percentage": 90 },
+    { "name": "TypeScript", "level": "Advanced", "percentage": 90 },
+    { "name": "CSS", "level": "Advanced", "percentage": 90 }
+  ],
+  "frameworks": [
+    "React", 
+    "Next.js", 
+    "Svelte", 
+    "Zustand", 
+    "Redux Toolkit", 
+    "Tailwind CSS", 
+    "Laravel"
+  ],
+  "databases": [
+    "MongoDB", 
+    "MySQL"
+  ],
+  "tools": [
+    "Git", 
+    "Heroku", 
+    "Vercel", 
+    "Electron", 
+    "WebSockets", 
+    "CI/CD pipelines"
+  ],
+  "competencies": [
+    "Real-time systems",
+    "Performance tuning",
+    "Modular architecture",
+    "Test-driven development",
+    "Responsive design",
+    "Accessibility"
+  ],
+  "professional": [
+    "Critical Thinking",
+    "Fast Learner",
+    "Creative Problem Solver",
+    "Leadership & Team Mentoring",
+    "Clean Code Practices",
+    "UI/UX Collaboration"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "languages": [
+    { "name": "JavaScript", "level": "Advanced", "percentage": 90 },
+    { "name": "TypeScript", "level": "Advanced", "percentage": 90 },
+    { "name": "CSS", "level": "Advanced", "percentage": 90 }
+  ],
+  "frameworks": [
+    "React", 
+    "Next.js", 
+    "Svelte", 
+    "Zustand", 
+    "Redux Toolkit", 
+    "Tailwind CSS", 
+    "Laravel"
+  ],
+  "databases": [
+    "MongoDB", 
+    "MySQL"
+  ],
+  "tools": [
+    "Git", 
+    "Heroku", 
+    "Vercel", 
+    "Electron", 
+    "WebSockets", 
+    "CI/CD pipelines"
+  ],
+  "competencies": [
+    "Real-time systems",
+    "Performance tuning",
+    "Modular architecture",
+    "Test-driven development",
+    "Responsive design",
+    "Accessibility"
+  ],
+  "professional": [
+    "Critical Thinking",
+    "Fast Learner",
+    "Creative Problem Solver",
+    "Leadership & Team Mentoring",
+    "Clean Code Practices",
+    "UI/UX Collaboration"
+  ]
+}

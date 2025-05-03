@@ -1,0 +1,22 @@
+{
+  "degrees": [
+    {
+      "degree": "BE in Computer Engineering",
+      "institution": "GIDC Degree Engineering College",
+      "period": "2015 - 2018",
+      "grade": "CGPA: 7.11"
+    },
+    {
+      "degree": "Diploma in Computer Engineering",
+      "institution": "Vallabh Budhi Polytechnic",
+      "period": "2012 - 2015",
+      "grade": "CGPA: 7.47"
+    }
+  ],
+  "achievements": [
+    "Udemy Certificate for Next.js",
+    "LinkedIn Assessment Badges (React & JavaScript)",
+    "Hacker Rank problem solving certificate",
+    "Silver medal in Sherlock"
+  ]
+}

@@ -1,0 +1,76 @@
+[
+  {
+    "id": "zania",
+    "title": "SR. WEB DEVELOPER (REACT TS)",
+    "company": "ZANIA",
+    "period": "JAN 2025 - PRESENT",
+    "responsibilities": [
+      "Designed and implemented a secure authentication system with session management, token handling, and RBAC.",
+      "Built and deployed a ChatGPT-like chatbot using LLM APIs, improving customer interaction and automation.",
+      "Integrated real-time updates with WebSockets, optimizing thread performance and broadcasting.",
+      "Developed an App Update Notification System, increasing feature adoption and reducing user friction.",
+      "Led technical architecture interviews, ensuring high engineering standards in new hires."
+    ]
+  },
+  {
+    "id": "qubited",
+    "title": "SR. WEB DEVELOPER (REACT TS)",
+    "company": "QUBITED",
+    "period": "JAN 2023 - NOV 2024",
+    "responsibilities": [
+      "Led frontend development for global clients; fostered team growth through mentoring and skill-building.",
+      "Boosted code quality by introducing React Testing Library and improving test coverage across projects.",
+      "Streamlined workflows through process improvements and automation using tools like RTL / JEST.",
+      "Translated client requirements into efficient, scalable technical solutions.",
+      "Actively engaged in project management, stakeholder communication, and client onboarding."
+    ]
+  },
+  {
+    "id": "zignuts",
+    "title": "WEB DEVELOPER (REACT, NEXT.JS)",
+    "company": "ZIGNUTS TECHNOLABS",
+    "period": "JAN 2022 - JAN 2023",
+    "responsibilities": [
+      "Architected and led frontend development of enterprise-level apps, reducing load times by 25%.",
+      "Mentored a team of 6–10 developers; improved delivery speed and team efficiency.",
+      "Delivered award-winning products through close collaboration with stakeholders and clients.",
+      "Designed modular components for reusability and cross-project implementation."
+    ]
+  },
+  {
+    "id": "freelance",
+    "title": "FREELANCE/ SIDE PROJECTS (REACT, NEXT.JS, SVELTE)",
+    "company": null,
+    "period": "JAN 2021 - JAN 2022",
+    "responsibilities": [
+      "Built personal and client-facing apps using Svelte, React, and Electron.js.",
+      "Leveraged Zustand and Tailwind CSS to create fast, modern UIs.",
+      "Delivered end-to-end solutions, managing everything from design to deployment.",
+      "Implemented performance optimizations, complex animations, and responsive layouts."
+    ]
+  },
+  {
+    "id": "coruscate",
+    "title": "WEB DEVELOPER (REACT, NEXT.JS, LARAVEL, MONGODB)",
+    "company": "CORUSCATE SOLUTIONS",
+    "period": "APR 2019 - JAN 2021",
+    "responsibilities": [
+      "Built and maintained web apps with full-stack technologies including React and Laravel.",
+      "Enhanced UI/UX consistency across projects and led development of Praavy.com from scratch.",
+      "Mentored interns and onboarded junior developers, improving team productivity.",
+      "Gained domain expertise across healthcare, logistics, and social platforms."
+    ]
+  },
+  {
+    "id": "bosleo",
+    "title": "JR. WEB DEVELOPER (REACT, LARAVEL, MYSQL)",
+    "company": "BOSLEO TECHNOLOGIES",
+    "period": "JUN 2018 - MAR 2019",
+    "responsibilities": [
+      "Contributed to production AngularJS and Laravel applications.",
+      "Refined full-stack skills and adopted best practices for scalable deployments.",
+      "Graduated from intern to full-time based on performance and initiative.",
+      "Enhanced application performance through code optimizations and UI refinements."
+    ]
+  }
+]
