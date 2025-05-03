@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Stock portfolio tracker",
+    "img": "/assets/projects/holdings.png",
+    "description": "Keep track of your multiple portfolios as well as individual stocks in an cross platform application that helps you track all your stock portfolios for better investing and better management of your investments",
+    "alt": "Holdings",
+    "github": ""
+  },
+  {
+    "title": "Expense Tracker",
+    "img": "/assets/projects/stats.png",
+    "description": "Keep track of your expenses and plan a bright with interactive charts and informative data.",
+    "alt": "Holdings",
+    "github": ""
+  },
+  {
+    "title": "Bliss",
+    "img": "/assets/projects/earth.jpg",
+    "description": "Single page web application to give you motivation and helps you to stay focused on what really matters. It has features like Pomodoro, Task List, StopWatch, Timer, Watch, Quotes and a beautiful new wallpaper everyday to keep you motivated and going.",
+    "link": "https://bliss-mu.vercel.app/",
+    "alt": "Earth Screenshot",
+    "github": ""
+  }
+]

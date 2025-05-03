@@ -1,0 +1,39 @@
+[
+  {
+    "title": "Typescript",
+    "img": "assets/tech/ts.svg",
+    "description": ".",
+    "rating": 4.5
+  },
+  {
+    "title": "React",
+    "img": "assets/tech/react-logo.png",
+    "description": "",
+    "rating": 4.5
+  },
+  {
+    "title": "Next.js",
+    "img": "assets/tech/next-logo.png",
+    "description": "",
+    "rating": 4.5
+  },
+  {
+    "title": "Jest",
+    "img": "assets/tech/jest.svg",
+    "description": "",
+    "rating": 4.5
+  },
+
+  {
+    "title": "Sass",
+    "img": "assets/tech/sass.svg",
+    "description": "",
+    "rating": 4.5
+  },
+  {
+    "title": "Svelte",
+    "img": "assets/tech/svelte-logo.png",
+    "description": "",
+    "rating": 3.5
+  }
+]
