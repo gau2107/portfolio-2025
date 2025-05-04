@@ -1,0 +1,170 @@
+[
+  {
+    "setup": "Knock knock!",
+    "response": "Who's there?",
+    "punchline": "Broken pencil.",
+    "followup": "Broken pencil who?",
+    "finalPunch": "Never mind, it's pointless."
+  },
+  {
+    "setup": "Knock knock!",
+    "response": "Who's there?",
+    "punchline": "Recursion.",
+    "followup": "Recursion who?",
+    "finalPunch": "Knock knock!"
+  },
+  {
+    "setup": "Knock knock!",
+    "response": "Who's there?",
+    "punchline": "Astronaut.",
+    "followup": "Astronaut who?",
+    "finalPunch": "I NASA question, don't interrupt me!"
+  },
+  {
+    "setup": "Knock knock!",
+    "response": "Who's there?",
+    "punchline": "Git.",
+    "followup": "Git who?",
+    "finalPunch": "Sorry, I've lost my commit-ment to this joke."
+  },
+  {
+    "setup": "Knock knock!",
+    "response": "Who's there?",
+    "punchline": "TypeScript.",
+    "followup": "TypeScript who?",
+    "finalPunch": "I Promise<T> this joke will make you laugh!"
+  },
+  {
+    "setup": "Knock knock!",
+    "response": "Who's there?",
+    "punchline": "Cache.",
+    "followup": "Cache who?",
+    "finalPunch": "Sorry, I think you've heard this joke before."
+  },
+  {
+    "setup": "Knock knock!",
+    "response": "Who's there?",
+    "punchline": "Quantum.",
+    "followup": "Quantum who?",
+    "finalPunch": "I'm here and not here at the same time."
+  },
+  {
+    "setup": "Knock knock!",
+    "response": "Who's there?",
+    "punchline": "Frontend.",
+    "followup": "Frontend who?",
+    "finalPunch": "Frontend of the line, this joke gets priority rendering!"
+  },
+  {
+    "setup": "Knock knock!",
+    "response": "Who's there?",
+    "punchline": "Olive.",
+    "followup": "Olive who?",
+    "finalPunch": "Olive next door to you!"
+  },
+  {
+    "setup": "Knock knock!",
+    "response": "Who's there?",
+    "punchline": "A broken keyboard.",
+    "followup": "A broken keyboard who?",
+    "finalPunch": "                "
+  },
+  {
+    "setup": "Knock knock!",
+    "response": "Who's there?",
+    "punchline": "SVG.",
+    "followup": "SVG who?",
+    "finalPunch": "SVG puns are so scalable."
+  },
+  {
+    "setup": "Knock knock!",
+    "response": "Who's there?",
+    "punchline": "Next.",
+    "followup": "Next who?",
+    "finalPunch": "Next.js going to help you understand this framework joke."
+  },
+  {
+    "setup": "Knock knock!",
+    "response": "Who's there?",
+    "punchline": "Tailwind.",
+    "followup": "Tailwind who?",
+    "finalPunch": "Tailwind blow you away with how easy CSS can be!"
+  },
+  {
+    "setup": "Knock knock!",
+    "response": "Who's there?",
+    "punchline": "Fibonacci.",
+    "followup": "Fibonacci who?",
+    "finalPunch": "1, 1, 2, 3, 5, 8, knock knock!"
+  },
+  {
+    "setup": "Knock knock!",
+    "response": "Who's there?",
+    "punchline": "React.",
+    "followup": "React who?",
+    "finalPunch": "React-ively speaking, you should have seen this joke coming!"
+  },
+  {
+    "setup": "Knock knock!",
+    "response": "Who's there?",
+    "punchline": "Binary.",
+    "followup": "Binary who?",
+    "finalPunch": "01001011 01101110 01101111 01100011 01101011 00100001"
+  },
+  {
+    "setup": "Knock knock!",
+    "response": "Who's there?",
+    "punchline": "Undefined.",
+    "followup": "Undefined who?",
+    "finalPunch": "Undefined is not a function!"
+  },
+  {
+    "setup": "Knock knock!",
+    "response": "Who's there?",
+    "punchline": "Docker.",
+    "followup": "Docker who?",
+    "finalPunch": "Docker? I barely know her! But I can containerize her code."
+  },
+  {
+    "setup": "Knock knock!",
+    "response": "Who's there?",
+    "punchline": "Localhost.",
+    "followup": "Localhost who?",
+    "finalPunch": "There's no place like 127.0.0.1!"
+  },
+  {
+    "setup": "Knock knock!",
+    "response": "Who's there?",
+    "punchline": "HTTP.",
+    "followup": "HTTP who?",
+    "finalPunch": "HTTP 404: Punchline Not Found"
+  },
+  {
+    "setup": "Knock knock!",
+    "response": "Who's there?",
+    "punchline": "AI.",
+    "followup": "AI who?",
+    "finalPunch": "AI don't need to explain my jokes to humans!"
+  },
+  {
+    "setup": "Knock knock!",
+    "response": "Who's there?",
+    "punchline": "Sudo.",
+    "followup": "Sudo who?",
+    "finalPunch": "Sudo make me a sandwich!"
+  },
+  {
+    "setup": "Knock knock!",
+    "response": "Who's there?",
+    "punchline": "Java.",
+    "followup": "Java who?",
+    "finalPunch": "Java good day? Mine's been brewing since morning!"
+  },
+  {
+    "setup": "Knock knock!",
+    "response": "Who's there?",
+    "punchline": "Bug.",
+    "followup": "Bug who?",
+    "finalPunch": "Don't worry, it's not a bug, it's a feature!"
+  }
+]

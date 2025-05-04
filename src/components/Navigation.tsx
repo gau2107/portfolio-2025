@@ -16,9 +16,6 @@ export function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const { isDark, toggle } = useTheme();
   const { scrollToElement } = useSmoothScroll();
-  
-  // Fix: Use isDark directly from the context instead of undefined theme
-  // const isDarkMode = theme === 'dark';
 
   const navItems: NavItem[] = [
     { name: 'About', href: '#about' },
@@ -56,26 +53,16 @@ export function Navigation() {
         <div className="flex justify-between items-center">
           <a 
             href="#" 
-            className="text-xl font-bold text-gray-900 dark:text-white"
-            onClick={(e) => handleNavigationClick(e, '#home')}
+            className="text-xl font-bold text-gray-900 dark:text-white transition-transform"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToElement('home', { offset: 0 });
+            }}
           >
             Gaurav Solanki
           </a>
           
           <div className="flex items-center space-x-4">
-            {/* Theme toggle button */}
-            {/* <button
-              onClick={toggle}
-              className={`p-2 rounded-full ${
-                isDark 
-                  ? 'bg-gray-800 text-yellow-300' 
-                  : 'bg-gray-100 text-gray-700'
-              } transition-colors duration-200`}
-              aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
-            >
-              {isDark ? <FaSun className="text-lg" /> : <FaMoon className="text-lg" />}
-            </button> */}
-            
             {/* Desktop navigation */}
             <nav className="hidden md:flex space-x-6">
               {navItems.map((item) => (
@@ -104,6 +91,7 @@ export function Navigation() {
         </div>
       </div>
 
+      {/* Mobile Navigation Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div 

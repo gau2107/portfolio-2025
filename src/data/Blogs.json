@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Introduction to React Hooks",
+    "img": "/assets/blogs/react-hooks.jpg",
+    "description": "Learn how to use React Hooks to simplify your functional components and manage state effectively.",
+    "alt": "React Hooks",
+    "medium": "https://medium.com/yourname/intro-to-react-hooks",
+    "link": ""
+  },
+  {
+    "title": "Building Responsive UIs with Tailwind CSS",
+    "img": "/assets/blogs/tailwind.jpg",
+    "description": "Discover how to create beautiful, responsive user interfaces quickly using the utility-first approach of Tailwind CSS.",
+    "alt": "Tailwind CSS",
+    "medium": "https://medium.com/yourname/tailwind-css-guide",
+    "link": ""
+  },
+  {
+    "title": "TypeScript Best Practices",
+    "img": "/assets/blogs/typescript.jpg",
+    "description": "A comprehensive guide to TypeScript best practices that will help you write more maintainable and error-free code.",
+    "alt": "TypeScript",
+    "medium": "https://medium.com/yourname/typescript-best-practices",
+    "link": "https://yourblog.com/typescript-best-practices"
+  }
+]

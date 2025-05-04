@@ -34,3 +34,21 @@ export interface AboutData {
     icon: string;
   }[];
 }
+
+export interface Project {
+  title: string;
+  img: string;
+  description: string;
+  alt?: string;
+  github?: string;
+  link?: string;
+}
+
+export interface BlogPost {
+  title: string;
+  img: string;
+  description: string;
+  alt?: string;
+  medium?: string;
+  link?: string;
+}
