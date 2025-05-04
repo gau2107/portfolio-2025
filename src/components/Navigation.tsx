@@ -3,8 +3,8 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSmoothScroll } from '@/hooks/useSmoothScroll';
-import { FaBars, FaTimes, FaMoon, FaSun } from 'react-icons/fa';
-import { useTheme } from './ThemeProvider';
+import { FaBars, FaTimes } from 'react-icons/fa';
+// import { useTheme } from './ThemeProvider';
 
 interface NavItem {
   name: string;
@@ -14,7 +14,7 @@ interface NavItem {
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { isDark, toggle } = useTheme();
+  // const { isDark, toggle } = useTheme();
   const { scrollToElement } = useSmoothScroll();
 
   const navItems: NavItem[] = [
