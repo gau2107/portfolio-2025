@@ -17,7 +17,8 @@ export function Hero() {
   const [clickCount, setClickCount] = useState(0);
   const [showJoke, setShowJoke] = useState(false);
   const [jokeStep, setJokeStep] = useState(0);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const audioElementsRef = useRef<HTMLAudioElement[]>([]);
+  const currentAudioIndexRef = useRef(0);
   const [jokes, setJokes] = useState<KnockKnockJoke[]>([]);
   const [currentJoke, setCurrentJoke] = useState<KnockKnockJoke | null>(null);
   // Add state to track the current joke index
@@ -45,14 +46,41 @@ export function Hero() {
     loadJokes();
   }, []);
   
-  // Create audio element
+  // New approach: use multiple audio elements
   useEffect(() => {
-    audioRef.current = new Audio("/knock.mp3");
+    // Skip during SSR
+    if (typeof window === 'undefined') return;
+    
+    // Create a pool of audio elements for rapid succession playback
+    const audioCount = 5; // Pool size
+    const audioElements: HTMLAudioElement[] = [];
+    
+    for (let i = 0; i < audioCount; i++) {
+      // Create audio element
+      const audio = new Audio("/knock.mp3");
+      
+      // Configure for best compatibility
+      audio.preload = 'auto';
+      audio.volume = 1.0;
+      audio.autoplay = false;
+      
+      // Trigger load
+      audio.load();
+      
+      // Store in array
+      audioElements.push(audio);
+    }
+    
+    // Store in ref
+    audioElementsRef.current = audioElements;
+    
+    // Clean up
     return () => {
-      if (audioRef.current) {
-        audioRef.current.pause();
-        audioRef.current = null;
-      }
+      audioElements.forEach(audio => {
+        audio.oncanplaythrough = null;
+        audio.pause();
+      });
+      audioElementsRef.current = [];
     };
   }, []);
 
@@ -76,10 +104,35 @@ export function Hero() {
   const handleNameClick = () => {
     setClickCount(prevCount => prevCount + 1);
     
-    // Play knock sound on every click
-    if (audioRef.current) {
-      audioRef.current.currentTime = 0;
-      audioRef.current.play().catch(e => console.log("Audio playback failed:", e));
+    // Very simple audio playback strategy
+    if (typeof window !== 'undefined' && audioElementsRef.current.length > 0) {
+      // Get the next audio element in the pool
+      const audioIndex = currentAudioIndexRef.current;
+      const audio = audioElementsRef.current[audioIndex];
+      
+      if (audio) {
+        // Reset to beginning 
+        audio.currentTime = 0;
+        
+        // Try to play (no fancy error handling, keep it simple)
+        const playPromise = audio.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {
+            // If autoplay is blocked, try to play on next user interaction
+            const resumeAudio = () => {
+              audio.play().catch(() => {});
+              window.removeEventListener('click', resumeAudio);
+              window.removeEventListener('touchstart', resumeAudio);
+            };
+            
+            window.addEventListener('click', resumeAudio, { once: true });
+            window.addEventListener('touchstart', resumeAudio, { once: true });
+          });
+        }
+      }
+      
+      // Move to next audio element in pool for next click
+      currentAudioIndexRef.current = (audioIndex + 1) % audioElementsRef.current.length;
     }
     
     // Set a timeout to reset the counter if user doesn't complete the triple click

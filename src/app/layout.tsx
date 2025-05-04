@@ -18,7 +18,10 @@ export const metadata: Metadata = {
   title: "Gaurav Solanki | Portfolio",
   description: "Personal portfolio of Gaurav Solanki showcasing skills, experience, and projects.",
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' }
+    ],
+    shortcut: { url: '/favicon.ico' }
   },
 };
 
