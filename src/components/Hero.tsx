@@ -47,7 +47,7 @@ export function Hero() {
   
   // Create audio element
   useEffect(() => {
-    audioRef.current = new Audio("/knock-knock.mp3");
+    audioRef.current = new Audio("/knock.mp3");
     return () => {
       if (audioRef.current) {
         audioRef.current.pause();
@@ -68,12 +68,6 @@ export function Hero() {
       // Update joke index for next time, with wrap-around
       setJokeIndex((prevIndex) => (prevIndex + 1) % jokes.length);
       
-      // Play knock sound
-      if (audioRef.current) {
-        audioRef.current.currentTime = 0;
-        audioRef.current.play().catch(e => console.log("Audio playback failed:", e));
-      }
-      
       // Reset click count
       setClickCount(0);
     }
@@ -81,6 +75,12 @@ export function Hero() {
 
   const handleNameClick = () => {
     setClickCount(prevCount => prevCount + 1);
+    
+    // Play knock sound on every click
+    if (audioRef.current) {
+      audioRef.current.currentTime = 0;
+      audioRef.current.play().catch(e => console.log("Audio playback failed:", e));
+    }
     
     // Set a timeout to reset the counter if user doesn't complete the triple click
     setTimeout(() => {
