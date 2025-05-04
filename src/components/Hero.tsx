@@ -20,6 +20,8 @@ export function Hero() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [jokes, setJokes] = useState<KnockKnockJoke[]>([]);
   const [currentJoke, setCurrentJoke] = useState<KnockKnockJoke | null>(null);
+  // Add state to track the current joke index
+  const [jokeIndex, setJokeIndex] = useState(0);
   
   // Load jokes from JSON file
   useEffect(() => {
@@ -57,11 +59,14 @@ export function Hero() {
   // Track triple clicks
   useEffect(() => {
     if (clickCount >= 3 && jokes.length > 0) {
-      // Select a random joke
-      const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
-      setCurrentJoke(randomJoke);
+      // Get the next joke in sequence instead of random
+      const nextJoke = jokes[jokeIndex];
+      setCurrentJoke(nextJoke);
       setShowJoke(true);
       setJokeStep(0);
+      
+      // Update joke index for next time, with wrap-around
+      setJokeIndex((prevIndex) => (prevIndex + 1) % jokes.length);
       
       // Play knock sound
       if (audioRef.current) {
@@ -72,7 +77,7 @@ export function Hero() {
       // Reset click count
       setClickCount(0);
     }
-  }, [clickCount, jokes]);
+  }, [clickCount, jokes, jokeIndex]);
 
   const handleNameClick = () => {
     setClickCount(prevCount => prevCount + 1);
@@ -126,7 +131,7 @@ export function Hero() {
             <h1 className="text-4xl sm:text-5xl font-bold mb-4">
               Hi, I&apos;m{" "}
               <motion.span 
-                className="text-blue-500 cursor-pointer"
+                className="text-blue-500 cursor-pointer select-none"
                 initial={{ color: "#3B82F6" }}
                 whileHover={{ 
                   color: "#2563EB",

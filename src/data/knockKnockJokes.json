@@ -2,27 +2,6 @@
   {
     "setup": "Knock knock!",
     "response": "Who's there?",
-    "punchline": "Broken pencil.",
-    "followup": "Broken pencil who?",
-    "finalPunch": "Never mind, it's pointless."
-  },
-  {
-    "setup": "Knock knock!",
-    "response": "Who's there?",
-    "punchline": "Recursion.",
-    "followup": "Recursion who?",
-    "finalPunch": "Knock knock!"
-  },
-  {
-    "setup": "Knock knock!",
-    "response": "Who's there?",
-    "punchline": "Astronaut.",
-    "followup": "Astronaut who?",
-    "finalPunch": "I NASA question, don't interrupt me!"
-  },
-  {
-    "setup": "Knock knock!",
-    "response": "Who's there?",
     "punchline": "Git.",
     "followup": "Git who?",
     "finalPunch": "Sorry, I've lost my commit-ment to this joke."
@@ -40,6 +19,27 @@
     "punchline": "Cache.",
     "followup": "Cache who?",
     "finalPunch": "Sorry, I think you've heard this joke before."
+  },
+  {
+    "setup": "Knock knock!",
+    "response": "Who's there?",
+    "punchline": "Recursion.",
+    "followup": "Recursion who?",
+    "finalPunch": "Knock knock!"
+  },
+  {
+    "setup": "Knock knock!",
+    "response": "Who's there?",
+    "punchline": "Broken pencil.",
+    "followup": "Broken pencil who?",
+    "finalPunch": "Never mind, it's pointless."
+  },
+  {
+    "setup": "Knock knock!",
+    "response": "Who's there?",
+    "punchline": "Astronaut.",
+    "followup": "Astronaut who?",
+    "finalPunch": "I NASA question, don't interrupt me!"
   },
   {
     "setup": "Knock knock!",
@@ -75,6 +75,20 @@
     "punchline": "SVG.",
     "followup": "SVG who?",
     "finalPunch": "SVG puns are so scalable."
+  },
+  {
+    "setup": "Knock knock!",
+    "response": "Who's there?",
+    "punchline": "Bug.",
+    "followup": "Bug who?",
+    "finalPunch": "Don't worry, it's not a bug, it's a feature!"
+  },
+  {
+    "setup": "Knock knock!",
+    "response": "Who's there?",
+    "punchline": "CSS.",
+    "followup": "CSS who?",
+    "finalPunch": "CSS you later, alligator!"
   },
   {
     "setup": "Knock knock!",
@@ -159,12 +173,5 @@
     "punchline": "Java.",
     "followup": "Java who?",
     "finalPunch": "Java good day? Mine's been brewing since morning!"
-  },
-  {
-    "setup": "Knock knock!",
-    "response": "Who's there?",
-    "punchline": "Bug.",
-    "followup": "Bug who?",
-    "finalPunch": "Don't worry, it's not a bug, it's a feature!"
   }
 ]
