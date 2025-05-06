@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "Advanced JavaScript Course",
+    "src": "https://udemy-certificate.s3.amazonaws.com/image/UC-803b7567-eab6-479a-9dbb-3c7f29152e31.jpg",
+    "isExternal": true,
+    "provider": "Udemy"
+  },
+  {
+    "id": 2,
+    "title": "Advanced CSS & SCSS",
+    "src": "https://udemy-certificate.s3.amazonaws.com/image/UC-e6df5cf4-7a34-46c4-a944-b289658b8837.jpg",
+    "isExternal": true,
+    "provider": "Udemy"
+  },
+  {
+    "id": 3,
+    "title": "Next.js - 70 Hours",
+    "src": "/assets/certificates/UC-836671ab-5041-45c7-870d-157798380c79.jpg",
+    "isExternal": false,
+    "provider": "Udemy"
+  },
+  {
+    "id": 4,
+    "title": "React.js Course",
+    "src": "/assets/certificates/UC-14afcf4d-1373-409a-a818-ac9c6a3f91db.jpg",
+    "isExternal": false,
+    "provider": "Udemy"
+  }
+]
