@@ -57,7 +57,7 @@ export function Certificates() {
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold mb-8 text-center">Certifications</h2>
         <p className="text-gray-600 dark:text-gray-400 mb-10 text-center max-w-3xl mx-auto">
-          I am committed to continuous learning and professional development. Here are some of the certifications I've earned to expand my skills and knowledge.
+          I am committed to continuous learning and professional development. Here are some of the certifications I&apos;ve earned to expand my skills and knowledge.
         </p>
         
         {isLoading ? (
