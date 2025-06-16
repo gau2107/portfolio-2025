@@ -58,7 +58,7 @@ export const InterestModal: React.FC<InterestModalProps> = ({ open, onClose, tit
               <div className="relative flex flex-col items-center justify-center">
                 <div className="relative flex items-center justify-center w-full">
                   <button
-                    className="absolute left-0 px-2 py-1 text-3xl text-gray-400 hover:text-blue-500"
+                    className="absolute left-0 px-2 py-1 text-3xl text-gray-400 hover:text-blue-500 z-20"
                     onClick={prev}
                     aria-label="Previous"
                     disabled={images.length < 2}
@@ -95,7 +95,7 @@ export const InterestModal: React.FC<InterestModalProps> = ({ open, onClose, tit
                     )}
                   </div>
                   <button
-                    className="absolute right-0 px-2 py-1 text-3xl text-gray-400 hover:text-blue-500"
+                    className="absolute right-0 px-2 py-1 text-3xl text-gray-400 hover:text-blue-500 z-20"
                     onClick={next}
                     aria-label="Next"
                     disabled={images.length < 2}

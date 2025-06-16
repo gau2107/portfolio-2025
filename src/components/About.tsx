@@ -97,13 +97,8 @@ export function About() {
             </motion.h3>
             <ul className="space-y-4">
               {about.interests.map((item, index) => {
-                // Only enable modal for these interests
-                const enableModal = [
-                  "Exploring new places and cultures",
-                  "Reading productivity, tech, and philosophy books",
-                  "Cooking and trying new cuisines",
-                  "Gardening and maintaining a green lifestyle"
-                ].includes(item.text);
+                // Enable modal only for "Cooking and trying new cuisines"
+                const enableModal = item.text === "Cooking and trying new cuisines";
 
                 return (
                   <motion.li 

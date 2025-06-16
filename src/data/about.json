@@ -33,9 +33,9 @@
       "text": "Cooking and trying new cuisines",
       "icon": "FaUtensils",
       "images": [
-        { "src": "/assets/about/1.webp", "title": "Homemade Pizza" },
-        { "src": "/assets/about/2.webp", "title": "Sushi Rolls" },
-        { "src": "/assets/about/3.webp", "title": "Sushi Rolls" }
+        { "src": "/assets/about/1.webp", "title": "Nachos" },
+        { "src": "/assets/about/2.webp", "title": "Tomato soup & Cheese toast" },
+        { "src": "/assets/about/3.webp", "title": "Pizza" }
       ]
     },
     {
