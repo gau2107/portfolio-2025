@@ -5,9 +5,12 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaLaptopCode, FaMountain, FaBookOpen, FaUtensils, FaLeaf, FaCode } from 'react-icons/fa';
 import { JSX } from 'react';
+import { InterestModal } from './InterestModal';
 
 export function About() {
   const [about, setAbout] = useState<AboutData | null>(null);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalData, setModalData] = useState<{ title: string; images: string[] }>({ title: '', images: [] });
 
   useEffect(() => {
     const getAboutData = async () => {
@@ -30,6 +33,11 @@ export function About() {
     };
 
     return icons[iconName] || <FaCode />; // Default to FaCode if not found
+  };
+
+  const handleInterestClick = (item: any) => {
+    setModalData({ title: item.text, images: item.images || [] });
+    setModalOpen(true);
   };
 
   if (!about) return null;
@@ -88,29 +96,52 @@ export function About() {
               Outside of Coding
             </motion.h3>
             <ul className="space-y-4">
-              {about.interests.map((item, index) => (
-                <motion.li 
-                  key={index} 
-                  className="flex items-center"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
-                  whileHover={{ scale: 1.03, x: 5 }}
-                >
-                  <motion.span 
-                    className="text-blue-500 mr-3"
-                    whileHover={{ rotate: 10, scale: 1.2 }}
-                    transition={{ type: "spring", stiffness: 300 }}
+              {about.interests.map((item, index) => {
+                // Only enable modal for these interests
+                const enableModal = [
+                  "Exploring new places and cultures",
+                  "Reading productivity, tech, and philosophy books",
+                  "Cooking and trying new cuisines",
+                  "Gardening and maintaining a green lifestyle"
+                ].includes(item.text);
+
+                return (
+                  <motion.li 
+                    key={index} 
+                    className={`flex items-center${enableModal ? ' cursor-pointer' : ''}`}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
+                    whileHover={enableModal ? { scale: 1.03, x: 5 } : undefined}
+                    onClick={enableModal ? () => handleInterestClick(item) : undefined}
+                    tabIndex={enableModal ? 0 : -1}
+                    onKeyDown={enableModal ? (e => {
+                      if (e.key === 'Enter' || e.key === ' ') handleInterestClick(item);
+                    }) : undefined}
+                    role={enableModal ? "button" : undefined}
+                    aria-label={enableModal ? `Show more about ${item.text}` : undefined}
                   >
-                    {getIconComponent(item.icon)}
-                  </motion.span>
-                  <span className="text-gray-600 dark:text-gray-400">{item.text}</span>
-                </motion.li>
-              ))}
+                    <motion.span 
+                      className="text-blue-500 mr-3"
+                      whileHover={enableModal ? { rotate: 10, scale: 1.2 } : undefined}
+                      transition={{ type: "spring", stiffness: 300 }}
+                    >
+                      {getIconComponent(item.icon)}
+                    </motion.span>
+                    <span className="text-gray-600 dark:text-gray-400">{item.text}</span>
+                  </motion.li>
+                );
+              })}
             </ul>
           </motion.div>
         </div>
       </div>
+      <InterestModal
+        open={modalOpen}
+        onClose={() => setModalOpen(false)}
+        title={modalData.title}
+        images={modalData.images}
+      />
     </section>
   );
 }

@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
 import Image from 'next/image';
 import projectsData from '@/data/Projects.json';
 import { SectionTitle } from './SectionTitle';
@@ -46,7 +46,7 @@ export function Projects() {
             <motion.div
               key={index}
               variants={item}
-              className="bg-white dark:bg-gray-900 rounded-xl shadow-lg overflow-hidden"
+              className="relative flex flex-col bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
               whileHover={{ y: -10 }}
@@ -64,37 +64,26 @@ export function Projects() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               </div>
               
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">
+              <div className="flex flex-col flex-grow p-4">
+                <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                <p className="text-gray-600 dark:text-gray-400 flex-grow">
                   {project.description}
                 </p>
-                <div className="flex space-x-4">
-                  {project.github && (
-                    <a 
-                      href={project.github} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400"
-                      aria-label={`GitHub repository for ${project.title}`}
-                    >
-                      <FaGithub size={20} />
-                    </a>
-                  )}
-                  {project.link && (
-                    <a 
-                      href={project.link} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400"
-                      aria-label={`Live demo for ${project.title}`}
-                    >
-                      <FaExternalLinkAlt size={18} />
-                    </a>
-                  )}
-                </div>
+              </div>
+              <div className="p-4 bg-gray-100 dark:bg-gray-800 flex justify-end">
+                {project.github && (
+                  <a 
+                    href={project.github} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-500 hover:text-blue-700 transition-colors"
+                    aria-label={`View ${project.title} on GitHub`}
+                  >
+                    <FaGithub size={20} />
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}

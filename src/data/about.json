@@ -5,13 +5,50 @@
     "Based in Gandhinagar, Gujarat, I'm always looking for new challenges and opportunities to grow both professionally and personally."
   ],
   "interests": [
-    { "text": "Exploring new places and cultures", "icon": "FaMountain" },
-    { "text": "Staying updated on technology and design trends", "icon": "FaLaptopCode" },
-    { "text": "Reading productivity, tech, and philosophy books", "icon": "FaBookOpen" },
-    { "text": "Meditation and mindfulness practices", "icon": "FaMeditation" },
-    { "text": "Cooking and trying new cuisines", "icon": "FaUtensils" },
-    { "text": "Gardening and maintaining a green lifestyle", "icon": "FaLeaf" },
-    { "text": "Creating side projects and prototypes", "icon": "FaCode" }
+    {
+      "text": "Exploring new places and cultures",
+      "icon": "FaMountain",
+      "images": [
+        { "src": "/images/interests/travel1.jpg", "title": "Hiking in the Alps" },
+        { "src": "/images/interests/travel2.jpg", "title": "Exploring Kyoto" }
+      ]
+    },
+    {
+      "text": "Staying updated on technology and design trends",
+      "icon": "FaLaptopCode"
+    },
+    {
+      "text": "Reading productivity, tech, and philosophy books",
+      "icon": "FaBookOpen",
+      "images": [
+        { "src": "/images/interests/book1.jpg", "title": "Atomic Habits" },
+        { "src": "/images/interests/book2.jpg", "title": "Deep Work" }
+      ]
+    },
+    {
+      "text": "Meditation and mindfulness practices",
+      "icon": "FaMeditation"
+    },
+    {
+      "text": "Cooking and trying new cuisines",
+      "icon": "FaUtensils",
+      "images": [
+        { "src": "/assets/about/1.webp", "title": "Homemade Pizza" },
+        { "src": "/assets/about/2.webp", "title": "Sushi Rolls" },
+        { "src": "/assets/about/3.webp", "title": "Sushi Rolls" }
+      ]
+    },
+    {
+      "text": "Gardening and maintaining a green lifestyle",
+      "icon": "FaLeaf",
+      "images": [
+        { "src": "/images/interests/gardening1.jpg", "title": "My Herb Garden" }
+      ]
+    },
+    {
+      "text": "Creating side projects and prototypes",
+      "icon": "FaCode"
+    }
   ],
   "languages": [
     { "name": "JavaScript", "level": "Advanced", "percentage": 90 },

@@ -73,7 +73,7 @@ export function Contact() {
         <div className="mt-12 text-center">
           <div className="flex justify-center space-x-6">
             <a 
-              href="https://github.com/Gaurav2k50" 
+              href="https://github.com/gau2107" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
