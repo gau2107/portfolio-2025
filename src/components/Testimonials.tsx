@@ -68,7 +68,7 @@ export function Testimonials() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Feedback from colleagues and clients I've had the pleasure to work with
+            Feedback from colleagues and clients I&apos;ve had the pleasure to work with
           </motion.p>
         </div>
         
@@ -88,7 +88,7 @@ export function Testimonials() {
                 >
                   <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 md:p-12 shadow-lg">
                     <FaQuoteLeft className="text-3xl text-blue-500 dark:text-blue-400 mb-6" />
-                    <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-8 italic">"{testimonial.content}"</p>
+                    <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-8 italic">&ldquo;{testimonial.content}&rdquo;</p>
                     <div className="flex items-center">
                       <div className="relative h-12 w-12 mr-4 overflow-hidden rounded-full">
                         <Image

@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 type ImageObj = { src: string; title?: string };
 type InterestModalProps = {
@@ -67,10 +68,12 @@ export const InterestModal: React.FC<InterestModalProps> = ({ open, onClose, tit
                     &#8592;
                   </button>
                   <div className="relative w-full flex justify-center">
-                    <img
+                    <Image
                       src={images[current].src}
                       alt={images[current].title || `Interest ${title} ${current + 1}`}
-                      className="rounded-md max-h-[32rem] object-contain mx-auto"
+                      width={800}
+                      height={600}
+                      className="rounded-md object-contain mx-auto"
                     />
                     {images[current].title && (
                       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full flex justify-center">

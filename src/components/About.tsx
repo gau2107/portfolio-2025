@@ -10,7 +10,7 @@ import { InterestModal } from './InterestModal';
 export function About() {
   const [about, setAbout] = useState<AboutData | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
-  const [modalData, setModalData] = useState<{ title: string; images: string[] }>({ title: '', images: [] });
+  const [modalData, setModalData] = useState<{ title: string; images: { src: string; title?: string }[] }>({ title: '', images: [] });
 
   useEffect(() => {
     const getAboutData = async () => {
@@ -35,8 +35,9 @@ export function About() {
     return icons[iconName] || <FaCode />; // Default to FaCode if not found
   };
 
-  const handleInterestClick = (item: any) => {
-    setModalData({ title: item.text, images: item.images || [] });
+  const handleInterestClick = (item: { text: string; images?: { src: string; title?: string }[] }) => {
+    const images = item.images || [];
+    setModalData({ title: item.text, images });
     setModalOpen(true);
   };
 

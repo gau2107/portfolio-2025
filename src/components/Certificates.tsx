@@ -79,22 +79,14 @@ export function Certificates() {
                 variants={itemVariants}
               >
                 <div className="relative aspect-[16/10] cursor-pointer" onClick={() => setExpandedCert(expandedCert === cert.id ? null : cert.id)}>
-                  {cert.isExternal ? (
-                    <img 
+                  <div className="relative h-full w-full">
+                    <Image
                       src={cert.src}
                       alt={cert.title}
-                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                      fill
+                      className="object-cover transition-transform duration-300 hover:scale-105"
                     />
-                  ) : (
-                    <div className="relative h-full w-full">
-                      <Image
-                        src={cert.src}
-                        alt={cert.title}
-                        fill
-                        className="object-cover transition-transform duration-300 hover:scale-105"
-                      />
-                    </div>
-                  )}
+                  </div>
                 </div>
                 <div className="p-4">
                   <h3 className="text-lg font-medium text-gray-900 dark:text-white">{cert.title}</h3>
@@ -124,30 +116,19 @@ export function Certificates() {
                 transition={{ type: 'spring', damping: 25 }}
               >
                 <div className="relative overflow-hidden rounded-xl shadow-2xl">
-                  {certificates.find(c => c.id === expandedCert)?.isExternal ? (
-                    <motion.img 
-                      src={certificates.find(c => c.id === expandedCert)?.src}
-                      alt={certificates.find(c => c.id === expandedCert)?.title}
+                  <motion.div
+                    onClick={(e) => e.stopPropagation()}
+                    whileHover={{ scale: 1.01 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Image 
+                      src={certificates.find(c => c.id === expandedCert)?.src || ''}
+                      alt={certificates.find(c => c.id === expandedCert)?.title || ''}
+                      width={1000}
+                      height={700}
                       className="w-full h-auto"
-                      onClick={(e) => e.stopPropagation()}
-                      whileHover={{ scale: 1.01 }}
-                      transition={{ duration: 0.2 }}
                     />
-                  ) : (
-                    <motion.div
-                      onClick={(e) => e.stopPropagation()}
-                      whileHover={{ scale: 1.01 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      <Image 
-                        src={certificates.find(c => c.id === expandedCert)?.src || ''}
-                        alt={certificates.find(c => c.id === expandedCert)?.title || ''}
-                        width={1000}
-                        height={700}
-                        className="w-full h-auto"
-                      />
-                    </motion.div>
-                  )}
+                  </motion.div>
                 </div>
               </motion.div>
             </motion.div>
